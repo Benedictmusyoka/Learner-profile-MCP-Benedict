@@ -7,7 +7,7 @@ A teacher web app and an [MCP](https://modelcontextprotocol.io) server that keep
 ## Run it (one command)
 
 ```bash
-git clone https://github.com/<your-username>/learner-profile-mcp && cd learner-profile-mcp && python quickstart.py
+git clone https://github.com/Benedictmusyoka/learner-profile-mcp && cd learner-profile-mcp && python quickstart.py
 ```
 
 Needs Python 3.10+ and internet for `pip`. It builds a virtualenv, loads a **fictional** demo school (2 classes, 16 learners, 6 terms of marks), has the agent draft a summary, then starts the web app at http://localhost:8000.
