@@ -1,0 +1,12 @@
+# Render blueprint. A disk keeps the SQLite file between deploys (needs a paid plan).
+# Create the first teacher accounts from the service shell: python manage.py add-teacher ...
+services:
+  - type: web
+    name: learner-profile-mcp
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk: { name: data, mountPath: /data, sizeGB: 1 }
+    envVars:
+      - { key: LP_AGENT_TOKEN, generateValue: true }
+      - { key: LP_SECRET, generateValue: true }
